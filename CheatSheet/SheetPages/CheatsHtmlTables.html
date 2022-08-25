@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>HTML Tables</title>
+        <link href="C:\Codecademy projects\CheatSheet\CheatSheet_styles.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <div class="navigation">
+
+            <ul>
+                <li><a href="C:\Codecademy projects\CheatSheet\CheatSheet_index.html">Home</a></li>
+                <li><a href="C:\Codecademy projects\CheatSheet\SheetPages\CheatsHtmlTags.html">HTML Tags</a></li>
+                <li><a href="C:\Codecademy projects\CheatSheet\SheetPages\CheatsHtmlTables.html">HTML Tables</a></li>
+                <li><a href="C:\Codecademy projects\CheatSheet\SheetPages\CheatsCssSelectors.html">CSS Selectors</a></li>
+                <li><a href="C:\Codecademy projects\CheatSheet\SheetPages\CheatsCssProperties.html">CSS Properties</a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="main">
+
+            <h1>HTML Tables</h1>
+
+            <p>These are tags and attributes that are used to create HTML tables, I will be using them to create the table on this page.</p>
+
+            <table>
+                <thead>
+            <!--Table Headings-->
+                    <tr class="columnheadings odd">
+                        <th scope="col" class="coluse"><h2>Used For:</h2></th>
+                        <th scope="col" class="coltag"><h2>Tag/Attribute:</h2></th>
+                        <th scope="col" class="colnote"><h2>Notes:</h2></th>
+                    </tr>
+                </thead>
+                <tbody>
+            <!--Creating a Table-->
+                    <tr class="createtable even">
+                        <th scope="row" class="coluse"><h3>Creating a Table</h3></th>
+                        <td class="tag coltag">&lt;table&gt; &lt;/table&gt;</td>
+                        <td class="colnote">These tags contain everything else in the HTML table, including headings, rows, and cells.</td>
+                    </tr>
+            <!--Creating a Row-->
+                    <tr class="rows odd">
+                        <th scope="row" rowspan="2" class="coluse"><h3>Creating a Row</h3></th>
+                        <td rowspan="2" class="tag coltag">&lt;tr&gt; &lt;/tr&gt;</td>
+                        <td class="colnote">These tags create a row in the table. Each row conatins the cells that make up columns if the same number of cells is created on each row. Rows do not appear on a webpage until they contain at least one table data element.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="example">
+                                <h4>Example Code:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_trcode.jpg"/>
+                            </div>
+                            <div class="example">
+                                <h4>Example Outcome:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_troutcome.jpg"/>
+                            </div>
+                        </td>
+                    </tr>
+            <!--Creating a Cell for Table Data-->
+                    <tr class="columncells even">
+                        <th scope="row" rowspan="2" class="coluse"><h3>Creating a Cell for Table Data</h3></th>
+                        <td rowspan="2" class="tag coltag">&lt;td&gt; &lt;/td&gt;</td>
+                        <td class="colnote">These tags create a cell in a table row. Cells are placed from left to right in a row, and empty cells must still be created to ensure columns line up correctly where required.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="example">
+                                <h4>Example Code:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_tdcode.jpg"/>
+                            </div>
+                            <div class="example">
+                                <h4>Example Outcome:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_tdoutcome.jpg"/>
+                            </div>
+                        </td>
+                    </tr>
+            <!--Creating a Table Header-->
+                    <tr class="tablehead odd">
+                        <th scope="row" class="coluse"><h3>Creating a Table-Header</h3></th>
+                        <td class="tag coltag">&lt;thead&gt; &lt;/thead&gt;</td>
+                        <td class="colnote">These tags should only contain the "first" row of the table, which should only have table heading tags in it.</td>
+                    </tr>
+            <!--Creating a Heading-->
+                    <tr class="headings even">
+                        <th scope="row" rowspan="2" class="coluse"><h3>Creating a Heading</h3></th>
+                        <td rowspan="2" class="tag coltag">&lt;th&gt; &lt;/th&gt;</td>
+                        <td class="colnote">When a heading is required, these tags are used in place of the table data ones that are used to create a cell. This can be used for both vertical and horizontal table headings, but in a horizontal table heading, you need to make sure it is the first cell in that row.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="example">
+                                <h4>Example Code:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_thcode.jpg"/>
+                            </div>
+                            <div class="example">
+                                <h4>Example Outcome:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_thoutcome.jpg"/>
+                            </div>
+                        </td>
+                    </tr>
+            <!--Creating a Column Heading Attribute-->
+                    <tr class="headingattrib odd">
+                        <th scope="row" class="coluse"><h3>Creating a Column Heading Attribute</h3></th>
+                        <td class="tag coltag">&lt;th <span class="attribute">scope="col"</span>&gt; &lt;/th&gt;</td>
+                        <td class="colnote">It is a good idea to include a scope attribute in table heading opening tags, so that the element is properly recognised as a column heading.</td>
+                    </tr>
+            <!--Creating a Table-Body-->
+                    <tr class="tablebody even">
+                        <th scope="row" rowspan="2" class="coluse"><h3>Creating a Table-Body</h3></th>
+                        <td rowspan="2" class="tag coltag">&lt;tbody&gt; &lt;/tbody&gt;</td>
+                        <td class="colnote">These tags should contain all of the "body" elements in a table, usually the rows containing cells with individual data pieces that are not headings, totals, or summaries.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="example">
+                                <h4>Example Code:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_tbodycode.jpg"/>
+                            </div>
+                            <div class="example">
+                                <h4>Example Outcome:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_tbodyoutcome.jpg"/>
+                            </div>
+                        </td>
+                    </tr>
+            <!--Making a Cell Span Across Columns-->
+                    <tr class="spancolumn odd">
+                        <th scope="row" rowspan="2" class="coluse"><h3>Making a Cell Span Across Columns</h3></th>
+                        <td rowspan="2" class="tag coltag">&lt;td <span class="attribute">colspan="x"</span>&gt; &lt;/td&gt;</td>
+                        <td class="colnote">This is an attribute that can be added to a table data element, which will make it span across "columns" to the right of its inital position, by essentially taking up the space of however many cells are specified in the attribute value. Any other cells (table data elements) that reside to the right of a column-spanned cell in the same row, will be displaced to right.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="example">
+                                <h4>Example Code:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_colspancode.jpg"/>
+                            </div>
+                            <div class="example">
+                                <h4>Example Outcome:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_colspanoutcome.jpg"/>
+                            </div>
+                        </td>
+                    </tr>
+            <!--Making a Cell Span Down Rows-->
+                    <tr class="spanrow even">
+                        <th scope="row" rowspan="2" class="coluse"><h3>Making a Cell Span Down Rows</h3></th>
+                        <td rowspan="2" class="tag coltag">&lt;td <span class="attribute">rowspan="x"</span>&gt; &lt;/td&gt;</td>
+                        <td class="colnote">This is an attribute that can be added to a table data element, which will make it span across rows down from its initial position, by essentially taking up the space of however many cells are specified in the attribute value. Any other cells (table data elements) that normally reside below a row-spanned cell, will be displaced to right within their respective rows.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="example">
+                                <h4>Example Code:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_rowspancode.jpg"/>
+                            </div>
+                            <div class="example">
+                                <h4>Example Outcome:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_rowspanoutcome.jpg"/>
+                            </div>
+                        </td>
+                    </tr>
+            <!--Creating a Table-Footer-->
+                    <tr class="tablefooter odd">
+                        <th scope="row" rowspan="2" class="coluse"><h3>Creating a Table-Footer</h3></th>
+                        <td rowspan="2" class="tag coltag">&lt;tfoot&gt; &lt;tfoot&gt;</td>
+                        <td class="colnote">These tags section off the bottom of the table, and tend to be used for sums, differences, or other data results.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="example">
+                                <h4>Example Code:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_tfootcode.jpg"/>
+                            </div>
+                            <div class="example">
+                                <h4>Example Outcome:</h4>
+                                <img src="C:\Codecademy projects\CheatSheet\CheatSheet_Resources\HTML Tables imgs\HTMLTable_tfootoutcome.jpg"/>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </body>
+
+</html>
