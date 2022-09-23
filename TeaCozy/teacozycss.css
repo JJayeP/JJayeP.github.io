@@ -223,6 +223,7 @@ main{
 .locinfoblocks.container.item{
     gap: 40px;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .location.container.item{
