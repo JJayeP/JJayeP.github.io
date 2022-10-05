@@ -503,10 +503,6 @@ nav.desktop li.join {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section * {
-    border: red solid 1px;
-  }
-
   #quotes-section .content {
     justify-items: center;
   }
