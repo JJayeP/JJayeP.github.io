@@ -267,14 +267,16 @@ nav.desktop li.join {
 
   #sign-up-cta {
     margin: 0;
-    width: auto;
+    width: fit-content;
     height: auto;
     background-color: transparent;
     border: none;
+    padding: 0;
   }
 
   #sign-up-cta .content {
     margin-top: 0;
+    width: fit-content;
   }
 
   #sign-up-cta .email {
@@ -283,10 +285,12 @@ nav.desktop li.join {
 
   #sign-up-cta h1 {
     font-size: 3.125rem;
+    width: 100%;
   }
 
   #sign-up-cta h2 {
     font-size: 2.25rem;
+    width: 100%;
   }
 }
 
@@ -474,6 +478,7 @@ nav.desktop li.join {
 #quotes-section .content {
   display: grid; 
   grid-template: 100% / 4fr 1fr;
+  justify-items: center;
 }
 
 #quotes-section .quote {
@@ -483,12 +488,13 @@ nav.desktop li.join {
   line-height: 1.1;
   font-style: italic;
   color: #4a4a4a;
-  text-align: right;
+  width: fit-content;
 }
 
 #quotes-section .quote-citation {
   height: 1.875rem;
   text-align: left;
+  justify-self: left;
 }
 
 @media only screen and (max-width: 1241px) {
@@ -518,7 +524,7 @@ nav.desktop li.join {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 594px) {
   #quotes-section {
     padding: 1.875rem .625rem;
   }
