@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    border: 1px solid red;
+    margin: 12px;
+}
+
+.imageBlock img {
+    width: 100px;
+}
+
+/*.tooltip {
+    /*display: none; 
+} */
+
+.projectBlock, .exampleBlock {
+    width: 30%;
+    display: inline-block;
+}
+
+.projectBlock img {
+    width: 92%;
+}
+
+.skillBlock {
+    display: block;
+}
+
+.codecademy img, .skillIcon img {
+    width: 50px;
+}
+
+.skillExampleLinks {
+    display: inline-flex;
+}
