@@ -25,7 +25,6 @@ Viewing/editing
 
 * {
     box-sizing: border-box;
-    border: 1px solid red;
     margin: 0;
 }
 
@@ -44,6 +43,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 5;
+    border-bottom: #001524 2px solid;
 }
 
 nav {
@@ -69,17 +69,38 @@ header ul {
 header h1 {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
 }
 
 header li {
     width: 25%;
 }
 
+header a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:#001524;
+}
+
+header a:hover {
+    background-color: #F3B391;
+    text-shadow: 0 0 5px white, 0 0 10px #EAF5E9, 0 0 15px #C1DCCC;
+
+}
+
 /*-------------------------------------------- Main ----------------------------------------------------*/
 
 main {
     position: relative;
-    width: 98%;
+    top: clamp(45px, 10vw, 50px);
+    width: 96vw;
     margin: auto;
 }
 
