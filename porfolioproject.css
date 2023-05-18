@@ -1,27 +1,91 @@
+/* 
+Style references
+
+Colours:
+#1E3445 (gunmetal)
+#1E453B (brunswick green)
+#EAF6F3 (mint cream)
+#EAF5E9 (honeydew)
+#657153 (reseda green)
+#F3B391 (peach)
+#001524 (rich black)
+#C1DCCC (ash gray)
+
+Fonts:
+
+
+
+Viewing/editing
+    border: 1px solid red;
+    margin: 2px;
+
+*/
+
 /*-------------------------------------------- Whole page ----------------------------------------------------*/
 
 * {
     box-sizing: border-box;
     border: 1px solid red;
-    margin: 12px;
+    margin: 0;
 }
 
 html {
-    background-color: #E2DCF0;
+    background-color: #001524;
+    color: #001524;
 }
 
 /*-------------------------------------------- Header ----------------------------------------------------*/
 
+header {
+    background-color: #EAF5E9;
+    height: clamp(45px, 8vw, 50px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
 nav {
     display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+nav div {
+    width: 40%;
+    height: 100%;
 }
 
 header ul {
     list-style: none;
     display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: space-around;
+    padding: 0;
+}
+
+header h1 {
+    width: 100%;
+    height: 100%;
+}
+
+header li {
+    width: 25%;
 }
 
 /*-------------------------------------------- Main ----------------------------------------------------*/
+
+main {
+    position: relative;
+    width: 98%;
+    margin: auto;
+}
+
+section {
+    background-color: #C1DCCC;
+}
 
 .imageBlock img {
     width: 100px;
