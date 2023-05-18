@@ -1,8 +1,27 @@
+/*-------------------------------------------- Whole page ----------------------------------------------------*/
+
 * {
     box-sizing: border-box;
     border: 1px solid red;
     margin: 12px;
 }
+
+html {
+    background-color: #E2DCF0;
+}
+
+/*-------------------------------------------- Header ----------------------------------------------------*/
+
+nav {
+    display: flex;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+/*-------------------------------------------- Main ----------------------------------------------------*/
 
 .imageBlock img {
     width: 100px;
@@ -31,4 +50,14 @@
 
 .skillExampleLinks {
     display: inline-flex;
+}
+
+/*-------------------------------------------- Footer ----------------------------------------------------*/
+
+footer section{
+    display: inline-flex;
+}
+
+footer img {
+    height: 30px;
 }
