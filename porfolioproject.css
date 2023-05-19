@@ -2,14 +2,12 @@
 Style references
 
 Colours:
-#1E3445 (gunmetal)
-#1E453B (brunswick green)
-#EAF6F3 (mint cream)
-#EAF5E9 (honeydew)
-#657153 (reseda green)
-#F3B391 (peach)
 #001524 (rich black)
-#C1DCCC (ash gray)
+#15616D (caribbean current)
+#FFECD1 (papaya whip)
+#FF7D00 (orange - wheel)
+#C7E1DE (mint green)
+#4E2600 (seal brown)
 
 Fonts:
 
@@ -29,14 +27,14 @@ Viewing/editing
 }
 
 html {
-    background-color: #001524;
+    background-color: #4E2600;
     color: #001524;
 }
 
 /*-------------------------------------------- Header ----------------------------------------------------*/
 
 header {
-    background-color: #EAF5E9;
+    background-color: #FFECD1;
     height: clamp(45px, 8vw, 50px);
     position: fixed;
     top: 0;
@@ -90,7 +88,7 @@ header a {
 }
 
 header a:hover {
-    background-color: #F3B391;
+    background-color: #FF7D00;
     text-shadow: 0 0 5px white, 0 0 10px #EAF5E9, 0 0 15px #C1DCCC;
 
 }
@@ -99,17 +97,61 @@ header a:hover {
 
 main {
     position: relative;
-    top: clamp(45px, 10vw, 50px);
+    top: clamp(49px, 10vw, 54px);
     width: 96vw;
     margin: auto;
+    border:#001524 solid 2px;
 }
 
 section {
-    background-color: #C1DCCC;
+    background-color: #C7E1DE;
+}
+
+.sectionHeading {
+    background-color: #001524;
+    color: white;
+}
+
+h3 {
+    background-color:#15616D;
+    color: white;
+}
+
+h3.hide {
+    display: none;
+}
+
+.infoAndImage {
+    display: inline-flex;
+    background-color: #4E2600;
+}
+
+.informationBlock {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 40vw;
+    width: 60vw;
+    background-color: #C7E1DE;
+}
+
+.info p {
+    width: 58vw;
+    text-overflow: wrap;
+
+}
+
+.imageBlock {
+    height: 40vw;
+    width: 36vw;
+    display: flex;
+    justify-content: center;
+    background-color:#15616D;
 }
 
 .imageBlock img {
-    width: 100px;
+    width: 90%;
+    overflow: hidden;
+    align-self: center;
 }
 
 /*.tooltip {
