@@ -113,10 +113,13 @@ section {
     color: white;
 }
 
-h3 {
+.headingAndArrows {
+    display: inline-flex;
     background-color:#15616D;
     color: white;
-    border: #C7E1DE solid 1px;
+    border: #C7E1DE solid 3px;
+    width: 100%;
+    justify-content: center;
 }
 
 .infoAndImage {
