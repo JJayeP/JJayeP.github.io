@@ -75,6 +75,8 @@ function arrowDirectionChange(targetHeading) {
     }
 };
 
+//NOTE: I used the .className property here instead of the .classList one, because .classList is not supported in earlier version of IE browser.
+
 function toggleParagraphHiddenClass(target) {
     if (target.className === 'paragraph hidden') {
         target.className = 'paragraph';
@@ -90,3 +92,5 @@ for (let i = 0; i < aboutMeInfos.length; i++) {
         toggleParagraphHiddenClass(aboutMeParagraphs[i]);
     };
 };
+
+//.taskOutcome - contained by .projectPic, .taskSourceCode - contained by .projectTitle, and .taskOutline - contained by .outsideLink are all also .tooltips.

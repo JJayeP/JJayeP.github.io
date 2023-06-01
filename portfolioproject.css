@@ -151,7 +151,6 @@ section {
 
 }
 
-
 .hidden {
     display: none;
 }
@@ -171,9 +170,11 @@ section {
     padding: 1vw;
 }
 
-/*.tooltip {
-    /*display: none; 
-} */
+.tooltip {
+    position: absolute;
+    top: -5px;
+    z-index: 4;
+}
 
 .projectBlock, .exampleBlock {
     width: 30%;
@@ -181,7 +182,10 @@ section {
 }
 
 .projectBlock img {
-    width: 92%;
+    max-height: 23vw;
+    overflow: hidden;
+    align-self: center;
+    padding: 1vw;
 }
 
 .skillBlock {
