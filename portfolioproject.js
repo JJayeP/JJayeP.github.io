@@ -47,11 +47,23 @@ whereHeading.onclick = ()=> {
 }
 */
 
+/* function collapseExpandSegment(targetSegment) {
+    console.log(targetSegment.style);
+    if (targetSegment.style.display === 'block') {
+         targetSegment.style.display = 'none';
+    } else if (targetSegment.style.display === 'none') {
+         targetSegment.style.display = 'block';
+    }
+ }; */
+
 //-------------------------------------------------------------------------------------------------------------------------------------
 
 let aboutMeHeadings = document.getElementsByClassName('headingAndArrows');
+let aboutMeParagraphs = document.getElementsByClassName('paragraph');
+let aboutMeInfos = document.getElementsByClassName('info');
 
 /* I forgot that "is equal to" is === and assigning new values is = */
+
 
 function arrowDirectionChange(targetHeading) {
     if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↓ &nbsp;') {
@@ -61,9 +73,20 @@ function arrowDirectionChange(targetHeading) {
         targetHeading.getElementsByClassName('leftArrow')[0].innerHTML = '&darr; &nbsp;';
         targetHeading.getElementsByClassName('rightArrow')[0].innerHTML = '&nbsp; &darr;';
     }
-} 
+};
 
-for(let i = 0; i < aboutMeHeadings.length; i++){
-    aboutMeHeadings[i].onclick = ()=> arrowDirectionChange(aboutMeHeadings[i]);
-}
+function toggleParagraphHiddenClass(target) {
+    if (target.className === 'paragraph hidden') {
+        target.className = 'paragraph';
+    } else {
+        target.className = 'paragraph hidden';
+    };
+};
 
+
+for (let i = 0; i < aboutMeInfos.length; i++) {
+    aboutMeInfos[i].onclick = ()=> {
+        arrowDirectionChange(aboutMeHeadings[i]);
+        toggleParagraphHiddenClass(aboutMeParagraphs[i]);
+    };
+};
