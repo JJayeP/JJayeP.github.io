@@ -1,5 +1,3 @@
-
-
 window.onload = ()=>{
     console.log('script loaded');
 }
@@ -21,7 +19,7 @@ testElement[0].addEventListener('click', function() {
     testElement[0].style.backgroundColor = 'pink';
 });*/
 
-let aboutMeHeadings = document.getElementsByClassName('headingAndArrows');
+//workExperienceHeading.onclick = ()=> arrowDirectionChange(workExperienceHeading);
 
 /*
 workExperienceHeading.onclick = ()=> {
@@ -50,37 +48,10 @@ whereHeading.onclick = ()=> {
 */
 
 //-------------------------------------------------------------------------------------------------------------------------------------
-/*
 
-  function arrowDirectionChange(targetHeading) {
-    
-    let arrowIndex = 0;
-    if (targetHeading === workExperienceHeading) {
-        arrowIndex = 0;
-    } else if (targetHeading === whereHeading) {
-        arrowIndex = 1;
-    } else if (targetHeading === studyHeading) {
-        arrowIndex = 2;
-    } else if (targetHeading === hobbiesHeading) {
-        arrowIndex = 3;
-    }
-    console.log(targetHeading.getElementsByClassName('leftArrow')[arrowIndex].innerHTML === "↑ &nbsp;");
-    if  (arrowDirection === 'down') {
-        targetHeading.getElementsByClassName('leftArrow')[arrowIndex].innerHTML = '&uarr; &nbsp;';
-        document.getElementsByClassName('rightArrow')[arrowIndex].innerHTML = '&nbsp; &uarr;'; 
-        arrowDirection = 'up';
-    } else if (arrowDirection === 'up') {
-            documnent.getElementsByClassName('leftArrow')[arrowIndex].innerHTML = '&darr; &nbsp;';
-            document.getElementsByClassName('rightArrow')[arrowIndex].innerHTML = '&nbsp; &darr;'; 
-            
-    }
-};
-
-workExperienceHeading.onclick = ()=> arrowDirectionChange(workExperienceHeading); */
-
+let aboutMeHeadings = document.getElementsByClassName('headingAndArrows');
 
 /* I forgot that "is equal to" is === and assigning new values is = */
-
 
 function arrowDirectionChange(targetHeading) {
     if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↓ &nbsp;') {
@@ -95,3 +66,4 @@ function arrowDirectionChange(targetHeading) {
 for(let i = 0; i < aboutMeHeadings.length; i++){
     aboutMeHeadings[i].onclick = ()=> arrowDirectionChange(aboutMeHeadings[i]);
 }
+
