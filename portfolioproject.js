@@ -58,12 +58,13 @@ whereHeading.onclick = ()=> {
 
 //-------------------------------------------------------------------------------------------------------------------------------------
 
+//Following code for About Me section---------------------------------------------------------------------------------------------
+
 let aboutMeHeadings = document.getElementsByClassName('headingAndArrows');
 let aboutMeParagraphs = document.getElementsByClassName('paragraph');
 let aboutMeInfos = document.getElementsByClassName('info');
 
-/* I forgot that "is equal to" is === and assigning new values is = */
-
+            //I forgot that "is equal to" is === and assigning new values is =
 
 function arrowDirectionChange(targetHeading) {
     if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↓ &nbsp;') {
@@ -75,7 +76,7 @@ function arrowDirectionChange(targetHeading) {
     }
 };
 
-//NOTE: I used the .className property here instead of the .classList one, because .classList is not supported in earlier version of IE browser.
+            //NOTE: I used the .className property here instead of the .classList one, because .classList is not supported in earlier version of IE browser.
 
 function toggleParagraphHiddenClass(target) {
     if (target.className === 'paragraph hidden') {
@@ -93,4 +94,13 @@ for (let i = 0; i < aboutMeInfos.length; i++) {
     };
 };
 
-//.taskOutcome - contained by .projectPic, .taskSourceCode - contained by .projectTitle, and .taskOutline - contained by .outsideLink are all also .tooltips.
+//Following code for Projects section ---------------------------------------------------------------------------------------------
+
+            //.taskOutcome - contained by .projectPic, .taskSourceCode - contained by .projectTitle, and .taskOutline - contained by .outsideLink are all also .tooltips.
+
+let tooltipTriggers = document.getElementsByClassName('ttTrigger');
+let tooltips = document.getElementsByClassName('tooltip');
+
+for (let i = 0; i < tooltipTriggers.length; i++) {
+    tooltipTriggers.onmouseover
+}
