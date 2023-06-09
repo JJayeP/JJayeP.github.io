@@ -70,9 +70,11 @@ function arrowDirectionChange(targetHeading) {
     if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↓ &nbsp;') {
         targetHeading.getElementsByClassName('leftArrow')[0].innerHTML = '&uarr; &nbsp;';
         targetHeading.getElementsByClassName('rightArrow')[0].innerHTML = '&nbsp; &uarr;';
+        document.getElementsByClassName('informationBlock')[0].style.justifyContent ='flex-start'; 
     } else if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↑ &nbsp;') {
         targetHeading.getElementsByClassName('leftArrow')[0].innerHTML = '&darr; &nbsp;';
         targetHeading.getElementsByClassName('rightArrow')[0].innerHTML = '&nbsp; &darr;';
+        document.getElementsByClassName('informationBlock')[0].style.justifyContent ='center';
     }
 };
 

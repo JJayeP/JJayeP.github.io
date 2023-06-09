@@ -108,26 +108,32 @@ main {
 
 section {
     background-color: #a9c7b5;
-    border: #171717 solid 2px;
+    border: #171717 solid 0.5vw;
+    padding: 0.5vw 0;
+    margin: 1vw 0;
 }
 
 .sectionHeading {
     background-color:#004a48;
     color: white;
+    border-top: solid #171717 0.5vw;
+    border-bottom: solid #171717 0.5vw;
 }
 
 .headingAndArrows {
     display: inline-flex;
     background-color:black;
     color: white;
-    border-bottom: #171717 2px solid;
     width: 100%;
+    height: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 .headingAndArrows:hover {
     background-color: #efebe7;
     color: black;
+    border-bottom: #171717 2px solid;
 }
 
 .infoAndImage {
@@ -139,14 +145,13 @@ section {
 }
 
 .informationBlock {
-    overflow-y: scroll;
     height: 100%;
     width: 100%;
     padding: 1vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    overflow-y: auto;
 }
 
 .info {
@@ -156,6 +161,11 @@ section {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100%;
+}
+
+.paragraph {
+ 
 }
 
 .info p {
@@ -182,7 +192,12 @@ section {
     max-height: 23vw;
     overflow: hidden;
     align-self: center;
-    padding: 1vw;
+    margin: 1vw;
+    border:#171717 solid 0.5vw;
+}
+
+.projectHeading {
+    display: flex;
 }
 
 .tooltip {
