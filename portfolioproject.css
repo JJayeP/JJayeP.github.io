@@ -140,7 +140,7 @@ section {
 .headingAndArrows:hover {
     background-color: #efebe7;
     color: black;
-    border-bottom: #171717 2px solid;
+   /* border-bottom: #171717 2px solid;   need to make this happen only when info is expanded*/
 }
 
 .infoAndImage {
@@ -226,21 +226,25 @@ section {
     text-align: center;
 }
 
-.tooltip {
+.tooltipTrigger {
     position: relative;
 }
 
-.tooltip p {
+.tooltip {
     position: absolute;
-}
-
-.tooltip, .tooltip p {
-    width: 25vw;
-    top: -3vw;
-    z-index: 4;
+    display: none;
     background-color: bisque;
     color: black;
     border: black solid 1px;
+    border-radius: 0.5vw;
+    z-index: 4;
+    margin: 0;
+
+}
+
+.tooltipTrigger:hover .tooltip {
+    display: flex;
+    text-align: left;
 }
 
 .projectBlock, .exampleBlock {

@@ -103,7 +103,7 @@ for (let i = 0; i < aboutMeInfos.length; i++) {
 let tooltipTriggers = document.getElementsByClassName('tooltipTrigger');
 let tooltips = document.getElementsByClassName('tooltip');
 
-function removeTooltipHiddenClass(target) {
+/* function removeTooltipHiddenClass(target) {
         target.className = 'tooltip';
 };
 
@@ -121,4 +121,4 @@ for (let i = 0; i < tooltipTriggers.length; i++) {
     tooltipTriggers[i].onmouseout = ()=> {
         addTooltipHiddenClass(tooltips[i]);
     };
-};
+}; */
