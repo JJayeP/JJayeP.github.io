@@ -110,8 +110,9 @@ section {
     background-color: #a9c7b5;
     border: #171717 solid 0.2vw;
     border-radius: 0.4vw;
-    padding: 0.5vw 0;
+    padding: 0.3vw 0;
     margin: 1vw 0;
+    width: 100%;
 }
 
 .sectionHeading {
@@ -124,6 +125,10 @@ section {
 
 .sectionHeading h2, .sectionHeading span {
     margin-left: 1vw;
+}
+
+.sectionHeading span {
+    color:#a9c7b5;
 }
 
 .hidden {
@@ -207,16 +212,21 @@ section {
 
 .galleryBlock {
     display: grid;
-    grid-template: repeat(2, 8fr) / repeat(3, 5fr);
-    gap: 1.5vw;
+    grid-template: repeat(2, 1fr) / repeat(3, 30%);
+    gap: 3vw 1vw;
+    padding: 2vw 1vw;
     grid-auto-flow: row;
-    margin: 1vw;
+    width: 100%;
+    justify-items: center;
+    justify-content: space-evenly;
 }
 
 .projectBlock {
     background-color: white;
     border:#171717 0.2vw solid;
     border-radius: 0.4vw;
+    max-width: 100%;
+
 }
 
 .projectHeading {
@@ -225,6 +235,7 @@ section {
     background-color: #2C2C2C;
     color: white;
     align-items: center;
+    width: 100%;
 }
 
 .projectHeading a {
@@ -295,9 +306,8 @@ section {
     display: flex;
 }
 
-.projectBlock, .exampleBlock {    
-    width: 29.5vw;
-    display: inline-block;
+.projectThumbnail {
+    width: 100%;
 }
 
 .projectDetailsToggle {
@@ -306,6 +316,7 @@ section {
     color: #a9c7b5;
     text-align: center;
     padding: 3px 0;
+    width: 100%;
 }
 
 .projectDetailsToggle:hover {
@@ -346,6 +357,11 @@ section {
 .skillBlock {
     display: block;
 }
+
+.exampleBlock {    
+    width: 28.5vw;
+    display: inline-block;
+ }
 
 .codecademyIcon, .skillIcon img {
     width: 50px;

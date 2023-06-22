@@ -99,4 +99,32 @@ for (let i = 0; i < aboutMeInfos.length; i++) {
 
 //Following code for Projects section ---------------------------------------------------------------------------------------------
 
+let projectDetailsToggles = document.getElementsByClassName('projectDetailsToggle');
+let allProjectInfoPs = document.getElementsByClassName('projectInfoPs');
 
+function projectsArrowDirectionChange(targetHeading) {
+    if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↓ &nbsp;') {
+        targetHeading.getElementsByClassName('leftArrow')[0].innerHTML = '&uarr; &nbsp;';
+        targetHeading.getElementsByClassName('rightArrow')[0].innerHTML = '&nbsp; &uarr;';
+        targetHeading.getElementsByClassName('showDetails')[0].innerHTML = 'Hide Project Details';
+    } else if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↑ &nbsp;') {
+        targetHeading.getElementsByClassName('leftArrow')[0].innerHTML = '&darr; &nbsp;';
+        targetHeading.getElementsByClassName('rightArrow')[0].innerHTML = '&nbsp; &darr;';
+        targetHeading.getElementsByClassName('showDetails')[0].innerHTML = 'Show Project Details';
+    }
+};
+
+function toggleProjectInfoPsHiddenClass(target) {
+    if (target.className === 'projectInfoPs hidden') {
+        target.className = 'projectInfoPs';
+    } else {
+        target.className = 'projectInfoPs hidden';
+    };
+};
+
+for (let i = 0; i < aboutMeInfos.length; i++) {
+    aboutMeInfos[i].onclick = ()=> {
+        aboutMeArrowDirectionChange(aboutMeHeadings[i]);
+        toggleParagraphHiddenClass(aboutMeParagraphs[i]);
+    };
+};
