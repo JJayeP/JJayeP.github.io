@@ -338,6 +338,10 @@ section {
 
 .projectInfoPs {
     position: absolute;
+    z-index: 3;
+    background-color:#efebe7;
+    border:#171717 solid 1px;
+    border-radius: 0.2vw;
 }
 
 .projectScreenshotLink {
@@ -354,7 +358,7 @@ section {
 }
 
 .darkScreen {
-    background-color: hsla(0, 0%, 0%, 0.8);
+    background-color: hsla(0, 0%, 14%, 0.8);
     width: 100%;
     grid-area: 1 / 1 / span 1 / span 1;
 }

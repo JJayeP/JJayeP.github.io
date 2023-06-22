@@ -122,9 +122,9 @@ function toggleProjectInfoPsHiddenClass(target) {
     };
 };
 
-for (let i = 0; i < aboutMeInfos.length; i++) {
-    aboutMeInfos[i].onclick = ()=> {
-        aboutMeArrowDirectionChange(aboutMeHeadings[i]);
-        toggleParagraphHiddenClass(aboutMeParagraphs[i]);
+for (let i = 0; i < projectDetailsToggles.length; i++) {
+    projectDetailsToggles[i].onclick = ()=> {
+        projectsArrowDirectionChange(projectDetailsToggles[i]);
+        toggleProjectInfoPsHiddenClass(allProjectInfoPs[i]);
     };
 };
