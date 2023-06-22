@@ -31,7 +31,7 @@ Viewing/editing
 }
 
 html {
-    background-color: black;
+    background-color:#2C2C2C;
 }
 
 /*-------------------------------------------- Header ----------------------------------------------------*/
@@ -102,14 +102,14 @@ header a:hover {
 main {
     position: relative;
     top: clamp(49px, 10vw, 54px);
-    width: 96vw;
+    width: 94vw;
     margin: auto;
-    border:black solid 2px;
 }
 
 section {
     background-color: #a9c7b5;
-    border: #171717 solid 0.5vw;
+    border: #171717 solid 0.2vw;
+    border-radius: 0.4vw;
     padding: 0.5vw 0;
     margin: 1vw 0;
 }
@@ -117,8 +117,8 @@ section {
 .sectionHeading {
     background-color:#004a48;
     color: white;
-    border-top: solid #171717 0.5vw;
-    border-bottom: solid #171717 0.5vw;
+    border-top: solid #171717 0.2vw;
+    border-bottom: solid #171717 0.2vw;
 }
 
 .hidden {
@@ -140,7 +140,7 @@ section {
 .headingAndArrows:hover {
     background-color: #efebe7;
     color: black;
-   /* border-bottom: #171717 2px solid;   need to make this happen only when info is expanded*/
+    cursor: pointer;
 }
 
 .infoAndImage {
@@ -169,6 +169,7 @@ section {
     align-items: center;
     width: 100%;
     height: 100%;
+    border-radius: 0.4vw;
 }
 
 .info p {
@@ -188,7 +189,8 @@ section {
     overflow: hidden;
     align-self: center;
     margin: 1vw;
-    border:#171717 solid 0.5vw;
+    border:#171717 solid 0.2vw;
+    border-radius: 0.4vw;
 }
 
 /* ------------------ PROJECTS SECTION ------------------ */
@@ -197,37 +199,59 @@ section {
     display: inline-block;
 }
 
+.galleryBlock {
+    display: grid;
+    grid-template: repeat(2, 8fr) / repeat(3, 5fr);
+    gap: 1vw;
+    grid-auto-flow: row;
+    margin: 1vw;
+}
+
 .projectBlock {
     background-color: white;
-    border:#171717 2px solid;
+    border:#171717 0.2vw solid;
+    border-radius: 0.4vw;
 }
 
 .projectHeading {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    display: grid;
+    grid-template: auto / 1fr 5fr;
     background-color: #2C2C2C;
     color: white;
+    align-items: center;
 }
 
 .projectHeading a {
     color: white;
     text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
+
+/*.h3Trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}*/
 
 .codecademyIcon {
     width: 100%;
     overflow: hidden;
-    align-self: center;
     padding: 5px;
+    border-radius: 0.2vw;
 }
 
-.projectHeading .tooltipTrigger h3 {
+.projectHeading h3 {
     text-align: center;
+    width: 100%;
 }
 
 .tooltipTrigger {
     position: relative;
+    width:100%;
+    height: 100%;
 }
 
 .tooltip {
@@ -235,16 +259,34 @@ section {
     display: none;
     background-color: bisque;
     color: black;
-    border: black solid 1px;
-    border-radius: 0.5vw;
+    border: black solid 2px;
+    border-radius: 5px;
     z-index: 4;
     margin: 0;
+    padding: 2px 4px;
+}
 
+.viewTaskOutline {
+    top: 0px;
+    left: 50px;
+}
+.viewOutcomeSourceCode {
+    top: -1vw;
+    left: -2.5vw;
+}
+
+.viewTaskOutcome {
+    top: -1vw;
+    right: 2vw;
+}
+
+.tooltip p {
+    text-align: center;
+    width: fit-content;
 }
 
 .tooltipTrigger:hover .tooltip {
     display: flex;
-    text-align: left;
 }
 
 .projectBlock, .exampleBlock {
@@ -252,12 +294,43 @@ section {
     display: inline-block;
 }
 
+.projectDetailsToggle {
+    min-height: 2vw;
+    background-color: #171717;
+    color: #a9c7b5;
+    text-align: center;
+    padding: 3px 0;
+}
+
+.projectDetailsToggle:hover {
+    background-color:#a9c7b5;
+    color:#171717;
+    padding: 2px 0;
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
+    cursor: pointer;
+}
+
+.projectDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectInfoPs {
+    display: none;
+}
+
+.projectScreenshotLink {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .projectPic {
-    max-height: 23vw;
     overflow: hidden;
-    align-self: center;
-    margin: 1vw;
-    border: solid 1px black;
+    margin: 0;
+    background-color: black;
 }
 
 
@@ -270,7 +343,7 @@ section {
 .codecademyIcon, .skillIcon img {
     width: 50px;
     background-color: white;
-    border:#171717 0.2vw solid;
+    border-right:#171717 0.2vw solid;
 }
 
 .skillExampleLinks {

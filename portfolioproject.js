@@ -98,27 +98,4 @@ for (let i = 0; i < aboutMeInfos.length; i++) {
 
 //Following code for Projects section ---------------------------------------------------------------------------------------------
 
-            //.taskOutcome - contained by .projectPic, .taskSourceCode - contained by .projectTitle, and .taskOutline - contained by .outsideLink are all also .tooltips.
 
-let tooltipTriggers = document.getElementsByClassName('tooltipTrigger');
-let tooltips = document.getElementsByClassName('tooltip');
-
-/* function removeTooltipHiddenClass(target) {
-        target.className = 'tooltip';
-};
-
-function addTooltipHiddenClass(target) {
-    target.className = 'tooltip hidden';
-};
-
-for (let i = 0; i < tooltipTriggers.length; i++) {
-    tooltipTriggers[i].onmouseover = ()=> {
-        removeTooltipHiddenClass(tooltips[i]);
-    };
-};
-
-for (let i = 0; i < tooltipTriggers.length; i++) {
-    tooltipTriggers[i].onmouseout = ()=> {
-        addTooltipHiddenClass(tooltips[i]);
-    };
-}; */
