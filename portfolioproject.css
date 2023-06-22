@@ -294,7 +294,7 @@ section {
 }
 
 .viewTaskOutcome {
-    top: -1vw;
+    top: 1vw;
     right: 2vw;
 }
 
@@ -354,13 +354,13 @@ section {
 }
 
 .darkScreen {
-    background-color: hsla(0, 0%, 0%, 0.7);
+    background-color: hsla(0, 0%, 0%, 0.8);
     width: 100%;
     grid-area: 1 / 1 / span 1 / span 1;
 }
 
-.darkScreen:hover {
-    background-color: hsla(0, 0%, 0%, 0);
+.pictureTrigger:hover .darkScreen {
+    display: none;
 }
 
 .projectPic {
@@ -399,6 +399,9 @@ footer section {
     width: 100%;
     background-color:#efebe7;
     overflow-x: hidden;
+    border-radius: 0%;
+    border: none;
+    border-top: black solid 2px;
 }
 
 footer img {
