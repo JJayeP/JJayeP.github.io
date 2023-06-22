@@ -91,7 +91,7 @@ header a {
 }
 
 header a:hover {
-    background-color: #a9c7b5;
+    background-color: #004a48;
     color: white;
     text-shadow: 0 0 1px black, 0 0 3px white, 0 0 8px #a9c7b5, 0 0 12px #a9c7b5;
 
@@ -119,6 +119,11 @@ section {
     color: white;
     border-top: solid #171717 0.2vw;
     border-bottom: solid #171717 0.2vw;
+    padding: 4px;
+}
+
+.sectionHeading h2, .sectionHeading span {
+    margin-left: 1vw;
 }
 
 .hidden {
@@ -157,7 +162,7 @@ section {
     padding: 1vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     overflow-y: auto;
 }
 
@@ -175,6 +180,7 @@ section {
 .info p {
     text-overflow: wrap;
     margin: 0;
+    height: fit-content;
 }
 
 .imageBlock {
@@ -202,7 +208,7 @@ section {
 .galleryBlock {
     display: grid;
     grid-template: repeat(2, 8fr) / repeat(3, 5fr);
-    gap: 1vw;
+    gap: 1.5vw;
     grid-auto-flow: row;
     margin: 1vw;
 }
@@ -289,8 +295,8 @@ section {
     display: flex;
 }
 
-.projectBlock, .exampleBlock {
-    width: 30vw;
+.projectBlock, .exampleBlock {    
+    width: 29.5vw;
     display: inline-block;
 }
 
@@ -303,7 +309,7 @@ section {
 }
 
 .projectDetailsToggle:hover {
-    background-color:#a9c7b5;
+    background-color: white;
     color:#171717;
     padding: 2px 0;
     border-bottom: solid black 1px;
@@ -312,12 +318,13 @@ section {
 }
 
 .projectDetails {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
 
 .projectInfoPs {
-    display: none;
+    position: absolute;
 }
 
 .projectScreenshotLink {

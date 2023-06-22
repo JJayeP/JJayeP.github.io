@@ -66,15 +66,15 @@ let aboutMeInfos = document.getElementsByClassName('info');
 
             //I forgot that "is equal to" is === and assigning new values is =
 
-function arrowDirectionChange(targetHeading) {
+function aboutMeArrowDirectionChange(targetHeading) {
     if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↓ &nbsp;') {
         targetHeading.getElementsByClassName('leftArrow')[0].innerHTML = '&uarr; &nbsp;';
         targetHeading.getElementsByClassName('rightArrow')[0].innerHTML = '&nbsp; &uarr;';
-        document.getElementsByClassName('informationBlock')[0].style.justifyContent ='flex-start'; 
+        targetHeading.parentNode.style.height='fit-content';
     } else if (targetHeading.getElementsByClassName('leftArrow')[0].innerHTML === '↑ &nbsp;') {
         targetHeading.getElementsByClassName('leftArrow')[0].innerHTML = '&darr; &nbsp;';
         targetHeading.getElementsByClassName('rightArrow')[0].innerHTML = '&nbsp; &darr;';
-        document.getElementsByClassName('informationBlock')[0].style.justifyContent ='center';
+        targetHeading.parentNode.style.height='100%';
     }
 };
 
@@ -91,10 +91,11 @@ function toggleParagraphHiddenClass(target) {
 
 for (let i = 0; i < aboutMeInfos.length; i++) {
     aboutMeInfos[i].onclick = ()=> {
-        arrowDirectionChange(aboutMeHeadings[i]);
+        aboutMeArrowDirectionChange(aboutMeHeadings[i]);
         toggleParagraphHiddenClass(aboutMeParagraphs[i]);
     };
 };
+
 
 //Following code for Projects section ---------------------------------------------------------------------------------------------
 
