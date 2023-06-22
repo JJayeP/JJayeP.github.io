@@ -222,11 +222,12 @@ section {
 }
 
 .projectBlock {
-    background-color: white;
+    background-color: #171717;
     border:#171717 0.2vw solid;
     border-radius: 0.4vw;
     max-width: 100%;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .projectHeading {
@@ -308,6 +309,7 @@ section {
 
 .projectThumbnail {
     width: 100%;
+    background-color: #171717;
 }
 
 .projectDetailsToggle {
@@ -343,12 +345,27 @@ section {
     align-content: center;
     justify-content: center;
     width: 100%;
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.pictureTrigger {
+    display: grid;
+    grid-template: 100% / 100%;
+}
+
+.darkScreen {
+    background-color: hsla(0, 0%, 0%, 0.7);
+    width: 100%;
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.darkScreen:hover {
+    background-color: hsla(0, 0%, 0%, 0);
 }
 
 .projectPic {
     overflow: hidden;
     margin: 0;
-    background-color: black;
 }
 
 
