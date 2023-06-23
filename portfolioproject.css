@@ -45,23 +45,26 @@ header {
     width: 100%;
     z-index: 5;
     border-bottom: black 4px solid;
+    display: flex;
+}
+
+.navHeading {
+    display: flex;
+    width: 100%;
+    Height: 100%;
 }
 
 nav {
     display: flex;
     width: 100%;
     height: 100%;
-}
-
-nav div {
-    width: 40%;
-    height: 100%;
+    justify-content: right;
 }
 
 header ul {
     list-style: none;
     display: flex;
-    width: 60%;
+    width: 100%;
     height: 100%;
     justify-content: space-around;
     padding: 0;
@@ -76,7 +79,7 @@ header h1 {
 }
 
 header li {
-    width: 25%;
+    width: 100%;
 }
 
 header a {
@@ -376,13 +379,12 @@ section {
 .skillBlocks {
     display: grid;
     grid-template: repeat(3, fit-content) / repeat(1, 100%);
-    gap: 1vw 3vw;
+    gap: 2vw;
     padding: 2vw;
     grid-auto-flow: row;
     width: 100%;
     justify-items: center;
     justify-content: space-evenly;
-    border: solid 1px red;
 }
 
 .skillBlock {
@@ -397,6 +399,7 @@ section {
 .skillHeading {
     align-items: center;
     width: 100%;
+    border-radius: 0.2vw;
 }
 
 .skillHeading a {
@@ -407,30 +410,79 @@ section {
     color: white;
     align-items: center;
     width: 100%;
+    border-radius: 0.2vw;
 }
 
 .skillHeading h3 {
     text-align: center;
 }
 
+.skillExamples {
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .exampleBlock {    
-    width: 28.5vw;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    background-color:#efebe7;
+    width: 10vw;
+    margin: 0 5px;
+    border: solid white 1px;
  }
 
 .codecademyIcon, .skillIcon img {
     width: 50px;
     background-color: white;
     border-right:#171717 0.2vw solid;
+    border-radius: 0.2vw;
+}
+
+.skillExampleProjectName {
+    background-color:#171717;
+    color:#a9c7b5;
+    border: 1px white solid;
+    text-align: center;
 }
 
 .skillExampleLinks {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.sourceCodeLink, .outcomeLink {
+    width: 100%;
+    height: 100%;
+    border: 1px white solid;
+    background-color:#a9c7b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sourceCodeLink a, .outcomeLink a {
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sourceCodeLink a:hover, .outcomeLink a:hover {
+    background-color:#004a48;
+    color: white;
 }
 
 /*-------------------------------------------- Footer ----------------------------------------------------*/
 
-footer section {
+footer {
     display: flex;
     position: relative;
     top: clamp(49px, 10vw, 54px);
@@ -440,6 +492,23 @@ footer section {
     border-radius: 0%;
     border: none;
     border-top: black solid 2px;
+    height: clamp(45px, 8vw, 50px);
+}
+
+.contact {
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+}
+
+.contactDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
 }
 
 footer img {
@@ -450,8 +519,18 @@ footer img {
 .contactType {
     display: flex;
     padding: 0 3vw;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
 .contactType a {
     display: flex;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
