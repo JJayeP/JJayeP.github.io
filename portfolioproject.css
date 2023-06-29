@@ -50,13 +50,13 @@ header {
 
 .navHeading {
     display: flex;
-    width: 100%;
+    width: 40%;
     Height: 100%;
 }
 
 nav {
     display: flex;
-    width: 100%;
+    width: 60%;
     height: 100%;
     justify-content: right;
 }
@@ -91,6 +91,8 @@ header a {
     align-items: center;
     text-decoration: none;
     color:black;
+    font-size: clamp(16px, 2.5vw, 25px);
+    padding: 1vw;
 }
 
 header a:hover {
