@@ -1,0 +1,324 @@
+&lt;!DOCTYPE html>
+
+&lt;html lang="en">
+&lt;head>
+&lt;meta charset="UTF-8">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+&lt;title>Infographic: The Power of Simple Machines&lt;/title>
+&lt;script src="https://cdn.tailwindcss.com">&lt;/script>
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js">&lt;/script>
+&lt;4><link rel="preconnect" href="https://fonts.googleapis.com">
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
+&lt;style>
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #F5F5F5;
+}
+.chart-container {
+position: relative;
+width: 100%;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+height: 300px;
+max-height: 400px;
+}
+@media (min-width: 768px) {
+.chart-container {
+height: 350px;
+}
+}
+.force-arrow {
+position: relative;
+width: 2px;
+background-color: currentColor;
+}
+.force-arrow::after {
+content: '';
+position: absolute;
+left: -4px;
+bottom: -1px;
+width: 0;
+height: 0;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 10px solid currentColor;
+}
+.fulcrum-triangle {
+width: 0;
+height: 0;
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+border-bottom: 25px solid #0D47A1;
+}
+&lt;/style>
+&lt;/head>
+&lt;body class="text-[#212121]">
+
+<header class="bg-[#0D47A1] text-white text-center py-12 px-4">
+    <h1 class="text-4xl md:text-6xl font-black tracking-tight">Unlocking the Power of Simplicity</h1>
+    <p class="text-xl md:text-2xl mt-4 font-light max-w-4xl mx-auto">An exploration of the six classical simple machines that form the bedrock of modern engineering and make our daily work possible.</p>
+</header>
+
+<main class="container mx-auto p-4 md:p-8">
+
+    <section id="introduction" class="mb-12">
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-[#0D47A1] mb-4">What is a Simple Machine?</h2>
+            <p class="text-lg mb-6">A simple machine is a fundamental mechanical device that modifies force and motion to perform work. They don't create energy; instead, they provide <span class="font-bold text-[#00796B]">mechanical advantage</span>, allowing us to accomplish tasks with less effort. This principle is defined by the ratio of the force produced by the machine (the load) to the force applied to it (the effort).</p>
+            <div class="bg-[#F5F5F5] rounded-lg p-6 text-center">
+                <h3 class="text-xl font-bold text-[#212121] mb-2">Mechanical Advantage (MA)</h3>
+                <p class="text-5xl font-black text-[#00796B]">MA = Load / Effort</p>
+                <p class="mt-4 text-md">A higher mechanical advantage means the machine multiplies the input force more effectively, making it easier to move a heavy load.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="machines" class="mb-12">
+        <h2 class="text-4xl font-black text-center mb-8">The Six Classical Simple Machines</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                <h3 class="text-2xl font-bold text-[#0D47A1] mb-4">1. Lever</h3>
+                <p class="mb-4">A rigid bar that pivots around a fixed point (fulcrum). The diagrams below show the three classes, which are defined by the positions of the fulcrum, load, and effort.</p>
+                <div class="space-y-6 flex-grow flex flex-col justify-around">
+                    <div class="text-center">
+                        <p class="font-bold mb-2">Class 1: Fulcrum in the middle</p>
+                        <div class="flex items-center justify-around text-xs"><span>Effort ↓</span><span>Load ↓</span></div>
+                        <div class="h-1 bg-gray-400 my-1 relative">
+                           <div class="absolute w-full h-full flex justify-center items-end -bottom-1"><div class="fulcrum-triangle"></div></div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-bold mb-2">Class 2: Load in the middle</p>
+                        <div class="flex items-center justify-around text-xs"><span></span><span>Load ↓</span><span>Effort ↑</span></div>
+                         <div class="h-1 bg-gray-400 my-1 relative">
+                           <div class="absolute h-full flex justify-start items-end -bottom-1"><div class="fulcrum-triangle"></div></div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-bold mb-2">Class 3: Effort in the middle</p>
+                         <div class="flex items-center justify-around text-xs"><span></span><span>Effort ↑</span><span>Load ↓</span></div>
+                        <div class="h-1 bg-gray-400 my-1 relative">
+                           <div class="absolute h-full flex justify-start items-end -bottom-1"><div class="fulcrum-triangle"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                <h3 class="text-2xl font-bold text-[#0D47A1] mb-4">2. Wheel and Axle</h3>
+                <p class="mb-4">This device consists of a large wheel attached to a smaller axle. Applying force to the wheel makes turning the axle much easier, as seen in doorknobs and steering wheels. The chart below shows the significant reduction in effort needed.</p>
+                <div class="chart-container flex-grow">
+                    <canvas id="wheelAxleChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                <h3 class="text-2xl font-bold text-[#0D47A1] mb-4">3. Pulley</h3>
+                <p class="mb-4">A pulley system uses a wheel and rope to lift heavy objects. A single fixed pulley only changes the direction of force, but adding more pulleys creates a powerful mechanical advantage, as shown in the chart.</p>
+                <div class="chart-container flex-grow">
+                    <canvas id="pulleyChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                <h3 class="text-2xl font-bold text-[#0D47A1] mb-4">4. Inclined Plane</h3>
+                <p class="mb-4">An inclined plane, or ramp, reduces the force needed to lift an object by increasing the distance over which the force is applied. A gentler slope requires less force but a longer distance to achieve the same height.</p>
+                 <div class="chart-container flex-grow">
+                    <canvas id="inclinedPlaneChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                <h3 class="text-2xl font-bold text-[#0D47A1] mb-4">5. Wedge</h3>
+                <p class="mb-4">A wedge is essentially two inclined planes joined back-to-back. It converts a forward force into two perpendicular forces, which is useful for splitting, cutting, or securing objects. The sharper the wedge, the greater the mechanical advantage.</p>
+                 <div class="flex-grow flex items-center justify-center">
+                    <div class="text-center">
+                        <p class="font-bold text-lg">Force Application</p>
+                        <div class="flex items-center justify-center my-4 text-[#00796B]">
+                            <div class="force-arrow h-16"></div>
+                        </div>
+                        <div style="width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 100px solid #0D47A1;"></div>
+                        <div class="flex justify-between mt-4 text-[#00796B]">
+                            <p class="font-bold">← Outward Force</p>
+                            <p class="font-bold">Outward Force →</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                <h3 class="text-2xl font-bold text-[#0D47A1] mb-4">6. Screw</h3>
+                <p class="mb-4">A screw is an inclined plane wrapped around a cylinder. This clever design converts rotational force into a powerful linear force, commonly used to fasten objects together or to lift heavy loads like a car jack.</p>
+                <div class="flex-grow flex items-center justify-center p-4">
+                    <div class="flex items-center space-x-4">
+                         <div class="text-center">
+                            <p class="font-bold text-lg mb-2">Rotational Effort</p>
+                            <div class="text-6xl text-[#00796B]">⟳</div>
+                        </div>
+                        <div class="text-4xl text-gray-400">→</div>
+                        <div class="text-center">
+                            <p class="font-bold text-lg mb-2">Linear Force</p>
+                            <div class="text-6xl text-[#0D47A1]">↓</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusion" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+        <h2 class="text-3xl font-bold text-[#0D47A1] mb-4">Why Simple Machines Matter</h2>
+        <p class="text-lg mb-6">While they may seem "simple," these devices are the fundamental components of nearly every complex machine we rely on today, from the gears in a bicycle to the engines in a spacecraft. Understanding them is understanding the core principles of physics and engineering.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <div class="text-5xl mb-2 text-[#00796B]">💪</div>
+                <h3 class="font-bold text-lg">Reduce Effort</h3>
+                <p>Move heavy loads with a fraction of the force.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <div class="text-5xl mb-2 text-[#00796B]">🔄</div>
+                <h3 class="font-bold text-lg">Change Direction</h3>
+                <p>Apply force in more convenient directions.</p>
+            </div>
+             <div class="bg-gray-100 p-4 rounded-lg">
+                <div class="text-5xl mb-2 text-[#00796B]">⚙️</div>
+                <h3 class="font-bold text-lg">Build Complexity</h3>
+                <p>The building blocks for all advanced machinery.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="text-center py-6 bg-[#212121] text-gray-400 px-4">
+    <p>An infographic exploring fundamental physics principles.</p>
+</footer>
+
+<script>
+    function wrapLabel(str, maxLen) {
+        if (str.length <= maxLen) {
+            return str;
+        }
+        const words = str.split(' ');
+        let lines = [];
+        let currentLine = '';
+        words.forEach(word => {
+            if ((currentLine + ' ' + word).trim().length > maxLen && currentLine.length > 0) {
+                lines.push(currentLine);
+                currentLine = word;
+            } else {
+                currentLine = (currentLine + ' ' + word).trim();
+            }
+        });
+        if (currentLine.length > 0) {
+            lines.push(currentLine);
+        }
+        return lines;
+    }
+
+    const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        if (Array.isArray(label)) {
+            return label.join(' ');
+        } else {
+            return label;
+        }
+    };
+
+    const chartColors = {
+        blue: '#0D47A1',
+        teal: '#00796B',
+        lightBlue: 'rgba(13, 71, 161, 0.2)',
+        lightTeal: 'rgba(0, 121, 107, 0.2)'
+    };
+
+    const defaultChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                callbacks: {
+                    title: tooltipTitleCallback
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    color: '#212121'
+                },
+                grid: {
+                    color: 'rgba(0,0,0,0.1)'
+                }
+            },
+            x: {
+                ticks: {
+                    color: '#212121'
+                },
+                grid: {
+                    color: 'rgba(0,0,0,0.1)'
+                }
+            }
+        }
+    };
+
+    const wheelAxleCtx = document.getElementById('wheelAxleChart').getContext('2d');
+    new Chart(wheelAxleCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Effort without Machine', 'Effort with Wheel and Axle'],
+            datasets: [{
+                label: 'Effort Force Required (Newtons)',
+                data: [100, 20],
+                backgroundColor: [chartColors.lightTeal, chartColors.lightBlue],
+                borderColor: [chartColors.teal, chartColors.blue],
+                borderWidth: 2
+            }]
+        },
+        options: defaultChartOptions
+    });
+
+    const pulleyCtx = document.getElementById('pulleyChart').getContext('2d');
+    const pulleyLabelsRaw = ['Single Fixed Pulley System', 'Single Movable Pulley', 'Two Pulley System', 'Four Pulley Block and Tackle'];
+    new Chart(pulleyCtx, {
+        type: 'bar',
+        data: {
+            labels: pulleyLabelsRaw.map(label => wrapLabel(label, 16)),
+            datasets: [{
+                label: 'Mechanical Advantage (MA)',
+                data: [1, 2, 2, 4],
+                backgroundColor: chartColors.lightBlue,
+                borderColor: chartColors.blue,
+                borderWidth: 2
+            }]
+        },
+        options: defaultChartOptions
+    });
+
+    const inclinedPlaneCtx = document.getElementById('inclinedPlaneChart').getContext('2d');
+    new Chart(inclinedPlaneCtx, {
+        type: 'line',
+        data: {
+            labels: ['10°', '20°', '30°', '45°', '60°', '90° (Vertical)'],
+            datasets: [{
+                label: 'Effort Force vs. Incline Angle',
+                data: [17.4, 34.2, 50, 70.7, 86.6, 100],
+                fill: true,
+                borderColor: chartColors.teal,
+                backgroundColor: chartColors.lightTeal,
+                tension: 0.1
+            }]
+        },
+        options: defaultChartOptions
+    });
+</script>
+&lt;/body>
+&lt;/html>
